@@ -21,7 +21,7 @@ TARGET_BOOTLOADER_BOARD_NAME := lv3
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 9976364
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 0
 BOARD_HAS_NO_REAL_SDCARD := true
 BOARD_SUPPRESS_SECURE_ERASE := true
@@ -32,5 +32,6 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_CRYPTO := true
 include $(LOCAL_PATH)/kernel.mk
+include device/generic/twrpbuilder/mtk.mk
 include device/generic/twrpbuilder/BoardConfig64.mk
 
